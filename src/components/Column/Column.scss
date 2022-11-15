@@ -48,7 +48,7 @@ $column-border-radius: 5px;
     &::-webkit-scrollbar {
       -webkit-appearance: none;
     }
-    &::-webkit-scrollbar-:vertical {
+    &::-webkit-scrollbar:vertical {
       width: 11px;
     }
     &::-webkit-scrollbar-thumb {
