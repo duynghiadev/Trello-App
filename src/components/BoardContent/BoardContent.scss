@@ -1,0 +1,18 @@
+@import "_setting.scss";
+
+.board-content {
+  display: flex;
+  margin: 0 $gap $gap;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: 11px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $common-element-bg;
+    border-radius: 8px;
+  }
+}
