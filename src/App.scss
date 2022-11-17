@@ -3,13 +3,12 @@
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.3rem;
 }
 
 .trello-duynghia-master {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 40px 50px 1fr;
+  overflow: hidden;
   background-color: $board-bg-color;
 }
