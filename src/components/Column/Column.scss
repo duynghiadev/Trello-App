@@ -1,11 +1,10 @@
 @import "_setting.scss";
 
 $list-bg-color: #ebecf0;
+$column-height: calc(#{$board-content-height} - #{$gap * 2});
 
 $column-header-height: 46px;
 $column-footer-height: 46px;
-$column-border-radius: 5px;
-$column-height: calc(#{$board-content-height} - #{$gap * 2});
 
 .column {
   flex: 0 0 auto;
@@ -14,7 +13,6 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
   margin-left: $gap;
   > * {
     background-color: $list-bg-color;
-    color: #333;
     padding: 0 8px;
   }
 
@@ -35,6 +33,16 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
     line-height: $column-footer-height;
     border-top-left-radius: $column-border-radius;
     border-top-right-radius: $column-border-radius;
+    color: #888;
+
+    .footer-actions {
+      margin-left: $gap;
+      cursor: pointer;
+
+      &:hover {
+        color: $app-main-text-color;
+      }
+    }
   }
 
   .card-list {
@@ -58,11 +66,13 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
     .card-ghost {
       transition: transform 0.18s ease;
       transform: rotate(5deg);
+      font-weight: bold;
     }
 
     .card-ghost-drop {
       transition: transform 0.18s ease-in-out;
       transform: rotate(0deg);
+      font-weight: bold;
     }
 
     .card-drop-preview {
