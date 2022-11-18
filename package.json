@@ -11,6 +11,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "font-awesome": "^4.7.0",
+    "html-react-parser": "^3.0.4",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
     "react": "^18.2.0",

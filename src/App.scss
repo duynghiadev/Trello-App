@@ -41,7 +41,20 @@ body {
 
   .btn:focus,
   .btn:active {
-    box-shadow: none;
-    outline: none;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .duynghiadev-content-editable {
+    background-color: inherit;
+    border: none;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+
+    &:focus {
+      background-color: white;
+      border: 1px solid $input-border-color;
+    }
   }
 }
