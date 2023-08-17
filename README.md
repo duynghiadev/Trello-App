@@ -4,11 +4,11 @@
 
 - Link Download Full Source Code hoàn chỉnh của bộ này và ủng hộ mình: (Sắp có...)
 
-- Link YouTube Playlist: https://www.youtube.com/playlist?list=PLP6tw4Zpj-RJP2-YrhtkWqObMQ-AA4TDy
+- Link YouTube Playlist: [Link YouTube](https://by.tn/yeNZ)
 
 ### Hướng dẫn clone Repo code này về máy các bạn chuẩn nhất ở đây nhé:
 
-- Link: https://youtu.be/lUfsTj45Uys
+- Link: [Link Youtube](https://by.tn/L8da)
 
 ### Requirements - Thông tin của bộ Code Base này - Chuẩn các phiên bản dưới đây để bắt đầu học: (Semantic Versioning)
 
@@ -33,11 +33,11 @@
 
 ### About Me - Thông tin về mình:
 
-Author: **Duynghiadev - Một Lập Trình Viên** & **CodeDN**
+Author: **Duynghiadev - Một Lập Trình Viên**
 
-Blog:
+Blog: ...
 
-CV:
+CV: ...
 
 "Learning new everyday not the copycat of yesterday!"
 
