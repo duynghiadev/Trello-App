@@ -70,7 +70,10 @@ function BoardBar() {
               width: 34,
               height: 34,
               fontSize: 16,
-              border: 'none'
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { bgcolor: '#a4b0be' }
             }
           }}
         >
@@ -101,7 +104,31 @@ function BoardBar() {
           <Tooltip title='trungquandev'>
             <Avatar
               alt='trungquandev'
+              src='https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+            />
+          </Tooltip>
+          <Tooltip title='trungquandev'>
+            <Avatar
+              alt='trungquandev'
               src='https://trungquandev.com/wp-content/uploads/2023/08/transparent-main-avatar-circle-min-trungquandev-codetq@3x-Large.jpeg'
+            />
+          </Tooltip>
+          <Tooltip title='trungquandev'>
+            <Avatar
+              alt='trungquandev'
+              src='https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+            />
+          </Tooltip>
+          <Tooltip title='trungquandev'>
+            <Avatar
+              alt='trungquandev'
+              src='https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+            />
+          </Tooltip>
+          <Tooltip title='trungquandev'>
+            <Avatar
+              alt='trungquandev'
+              src='https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
             />
           </Tooltip>
           <Tooltip title='trungquandev'>
