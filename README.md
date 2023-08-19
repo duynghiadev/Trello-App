@@ -2,13 +2,7 @@
 
 ### Base project for my MERN Stack Pro Course - Build Trello App on YouTube!
 
-- Link Download Full Source Code hoàn chỉnh của bộ này và ủng hộ mình: (Sắp có...)
-
 - Link YouTube Playlist: [Link YouTube](https://by.tn/yeNZ)
-
-### Hướng dẫn clone Repo code này về máy các bạn chuẩn nhất ở đây nhé:
-
-- Link: [Link Youtube](https://by.tn/L8da)
 
 ### Requirements - Thông tin của bộ Code Base này - Chuẩn các phiên bản dưới đây để bắt đầu học: (Semantic Versioning)
 
