@@ -56,10 +56,10 @@ function BoardContent({ board }) {
   const [orderedColumns, setOrderedColumns] = useState([])
 
   // Cùng một thời điểm chỉ có một phần tử đang được kéo (column hoặc card)
-  const [activeDragItemId, setActiveDragItemId] = useState([null])
-  const [activeDragItemType, setActiveDragItemType] = useState([null])
-  const [activeDragItemData, setActiveDragItemData] = useState([null])
-  const [oldColumnWhenDraggingCard, setOldColumnWhenDraggingCard] = useState([null])
+  const [activeDragItemId, setActiveDragItemId] = useState(null)
+  const [activeDragItemType, setActiveDragItemType] = useState(null)
+  const [activeDragItemData, setActiveDragItemData] = useState(null)
+  const [oldColumnWhenDraggingCard, setOldColumnWhenDraggingCard] = useState(null)
 
   // Điểm va chạm cuối cùng trước đó (xử lý thuật toán phát hiện va chạm, video 37)
   const lastOverId = useRef(null)
@@ -81,7 +81,8 @@ function BoardContent({ board }) {
     active,
     over,
     activeColumn,
-    activeDraggingCardId
+    activeDraggingCardId,
+    activeDraggingCardData
   ) => {
     setOrderedColumns((prevColumns) => {
       // Tìm vị trí (index) của cái overCard trong column đích (nơi activeCard sắp được thả)
@@ -114,7 +115,7 @@ function BoardContent({ board }) {
 
         // Phải cập nhật lại chuẩn dữ liệu columnId trong card sau khi kéo card giữa 2 column khác nhau
         const rebuild_activeDraggingCardData = {
-          ...activeDragItemData,
+          ...activeDraggingCardData,
           columnId: nextOverColumn._id
         }
 
@@ -156,8 +157,8 @@ function BoardContent({ board }) {
 
     // activeDraggingCard: Là cái card đang được kéo
     const {
-      id: activeDraggingCardId
-      // data: { current: activeDraggingCardData }
+      id: activeDraggingCardId,
+      data: { current: activeDraggingCardData }
     } = active
 
     // overCard: là cái card đang tương tác trên hoặc dưới so với cái card được kéo ở trên
@@ -173,7 +174,15 @@ function BoardContent({ board }) {
     // Xử lý logic ở đây chỉ khi kéo card qua 2 column khác nhau, còn nếu kéo card trong chính column ban đầu của nó thì không làm gì
     // Vì đây đang làm đoạn xử lý lúc kéo (handleDragOver), còn xử lý lúc kéo xong xuôi thì nó lại là vấn đề khác ở (handleDragEnd)
     if (activeColumn._id !== overColumn._id) {
-      moveCardBetweenDifferentColumns(overColumn, overCardId, active, over, activeColumn, activeDraggingCardId)
+      moveCardBetweenDifferentColumns(
+        overColumn,
+        overCardId,
+        active,
+        over,
+        activeColumn,
+        activeDraggingCardId,
+        activeDraggingCardData
+      )
     }
   }
 
@@ -188,8 +197,8 @@ function BoardContent({ board }) {
     if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.CARD) {
       // activeDraggingCard: Là cái card đang được kéo
       const {
-        id: activeDraggingCardId
-        // data: { current: activeDraggingCardData }
+        id: activeDraggingCardId,
+        data: { current: activeDraggingCardData }
       } = active
 
       // overCard: là cái card đang tương tác trên hoặc dưới so với cái card được kéo ở trên
@@ -205,7 +214,15 @@ function BoardContent({ board }) {
       // Hành động kéo thả card giữa 2 column khác nhau
       // Phải dùng tới activeDragItemData.columnId hoặc oldColumnWhenDraggingCard._id (set vào state từ bước handleDragStart) chứ không phải activeData trong scope handleDragEnd này vì sau khi đi qua onDragOver tới đây là state của card đã bị cập nhật một lần rồi
       if (oldColumnWhenDraggingCard._id !== overColumn._id) {
-        moveCardBetweenDifferentColumns(overColumn, overCardId, active, over, activeColumn, activeDraggingCardId)
+        moveCardBetweenDifferentColumns(
+          overColumn,
+          overCardId,
+          active,
+          over,
+          activeColumn,
+          activeDraggingCardId,
+          activeDraggingCardData
+        )
       } else {
         // Hành động kéo thả card trong cùng 1 cái column
 
