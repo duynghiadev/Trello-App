@@ -307,8 +307,8 @@ function BoardContent({ board }) {
 
       // Video 37.1: Nếu pointerIntersections là mảng rỗng, return luôn không làm gì hết
       // Fix triệt để cái bug flickering của thư viện Dnd-kit trong trường hợp sau:
-      // - Kéo một cái card có image cover lón và kéo lên phía trên cùng ra khỏi khu vực kéo thả
-      if (!pointerIntersections?.lengh) return
+      // - Kéo một cái card có image cover lớn và kéo lên phía trên cùng ra khỏi khu vực kéo thả
+      if (!pointerIntersections?.length) return
 
       // Thuật toán phát hiện va chạm sẽ trả về một mảng các va chạm ở đây (không cần bước này nữa - video 37.1)
       // const intersections = !!pointerIntersections?.length ? pointerIntersections : rectIntersection(args)
