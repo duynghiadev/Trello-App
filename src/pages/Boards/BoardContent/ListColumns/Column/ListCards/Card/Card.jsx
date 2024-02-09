@@ -12,7 +12,14 @@ import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 
 function Card({ card }) {
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging
+  } = useSortable({
     id: card._id,
     data: { ...card }
   })
@@ -30,7 +37,11 @@ function Card({ card }) {
   }
 
   const shouldShowCardAction = () => {
-    return !!card?.memberIds?.length || !!card?.comments?.length || !!card?.attachments?.length
+    return (
+      !!card?.memberIds?.length ||
+      !!card?.comments?.length ||
+      !!card?.attachments?.length
+    )
   }
 
   return (
@@ -43,7 +54,9 @@ function Card({ card }) {
         cursor: 'pointer',
         boxShadow: '0 1px 1px rgba(0,0,0,0.2)',
         overflow: 'unset',
-        display: card?.FE_PlaceholderCard ? 'none' : 'block'
+        display: card?.FE_PlaceholderCard ? 'none' : 'block',
+        border: '1px solid transparent',
+        '&:hover': { borderColor: (theme) => theme.palette.primary.main }
         // overflow: card?.FE_PlaceholderCard ? 'hidden' : 'unset',
         // height: card?.FE_PlaceholderCard ? '0px' : 'unset'
       }}
