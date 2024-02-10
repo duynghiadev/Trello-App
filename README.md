@@ -1,6 +1,10 @@
-### Bộ code base để bắt đầu học khóa MERN Stack Pro - Lập Trình qua dự án thực tế Trello Clone trên YouTube của Trung Quan Dev nhé các bạn!
+# Bộ code base để bắt đầu học khóa MERN Stack Pro - Lập Trình qua dự án thực tế Trello Clone trên YouTube của Trung Quan Dev nhé các bạn!
 
-### Base project for my MERN Stack Pro Course - Build Trello App on YouTube!
+Some images in the project
+
+![Refactor Components Structure](image.png)
+
+## Base project for my MERN Stack Pro Course - Build Trello App on YouTube!
 
 - Link YouTube Playlist: [Link YouTube](https://by.tn/yeNZ)
 
