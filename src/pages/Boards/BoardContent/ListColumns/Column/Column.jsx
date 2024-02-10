@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { TextField } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import DragHandleIcon from '@mui/icons-material/DragHandle'
@@ -64,7 +66,7 @@ function Column({ column }) {
 
   const addNewCard = () => {
     if (!newCardTitle) {
-      // console.error('Please enter Card Title')
+      toast.error('Please enter Card Title', { position: 'bottom-right' })
       return
     }
     // console.log('newCardTitle:', newCardTitle)
